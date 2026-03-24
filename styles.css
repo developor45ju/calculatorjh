@@ -1,7 +1,148 @@
-/* Place your CSS styles in this file */
+:root {
 
-h1 {
-    text-align: center;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: normal;
+    /* Colors theme 1 */
+    --main-navy-background: hsl(222, 26%, 31%);
+    --toggle-navy-background: hsl(223, 31%, 20%);
+    --screen-navy-background: hsl(224, 36%, 15%);
+    --key-navy-background: hsl(225, 21%, 49%);
+    --key-navy-shadow: hsl(224, 28%, 35%);
+    --key-red-background: hsl(6, 63%, 50%);
+    --key-red-shadow: hsl(6, 70%, 34%);
+    --key-gray-background: hsl(0, 0, 90%);
+    --key-gray-shadow: hsl(28, 16%, 65%);
+    --navy-text: hsl(221, 14%, 31%);
+    --white-text: hsl(0, 100%, 100%);
+
+    /* Colors theme 2 */
+    --main-grey-background: hsl(0, 0%, 90%);
+    --toggle-grey-background: hsl(0, 5%, 81%);
+    --screen-grey-background: hsl(0, 0%, 93%);
+    --key-blue-background: hsl(185, 42%, 37%);
+    --key-blue-shadow: hsl(185, 58%, 25%);
+    --key-orange-background: hsl(25, 99%, 27%);
+    --key-orange-shadow: hsl(25, 99%, 27%);
+    --key-gray: hsl(0, 0, 90%);
+    --key-gray-shadow: hsl(35, 11%, 61%);
+    --gray-text: hsl(60, 10%, 19%);
+    --white-text: hsl(0, 100%, 100%);
+
+    /* Colors theme 3 */
+    --main-purple-background: hsl(268, 75%, 9%);
+    --toggle-purple-background: hsl(268, 71%, 12%);
+    --key-purple-background: hsl(281, 89%, 26%);
+    --key-purple-shadow: hsl(285, 91%, 52%);
+    --key-cyan-background: hsl(176, 100%, 44%);
+    --key-cyan-shadow: hsl(177, 92%, 70%);
+    --yellow-text: hsl(52, 100%, 62%);
+    --blue-text: hsl(198, 20%, 13%);
+    --white-text: hsl(0, 100%, 100%);
+
+    /* Font */
+    --font: 'League Spartan', sans-serif;
+
+    /* Font size */
+    --font-size: 32px;
+
+    /* Font weight */
+    --font-weight: 700;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.calculate {
+    margin: auto;
+    height: 75%;
+    width: 85%;
+    padding: 10% 25%;
+    background-color: var(--main-navy-background);
+}
+
+.calculate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculate-theme-radio {
+    display: flex;
+}
+
+.calculate-theme-radio .group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculate-display {
+    background-color: var(--screen-navy-background);
+    color: var(--white-text);
+    font-family: var(--font);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    text-align: right;
+    padding: 20px;
+}
+
+.calculate-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: var(--toggle-navy-background);
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+.calculate-buttons .btn {
+    font-size: var(--font-size);
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+    color: black;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 2px 0px 0px var(--key-navy-shadow);
+    border-radius: 5px;
+    padding: 15px 0;
+}
+
+.calculate-buttons .btn.btn-reset {
+    grid-column: span 2;
+    background-color: var(--key-navy-background);
+    color: var(--white-text);
+}
+
+.calculate-buttons .btn.btn-equals {
+    grid-column: span 2;
+    background-color: var(--key-red-background);
+    color: var(--white-text);
+}
+
+.calculate-buttons .btn.btn-delete {
+    background-color: var(--key-navy-background);
+    color: var(--white-text);
 }

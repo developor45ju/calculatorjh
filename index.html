@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-
-  
+  <main class="calculate-container">
+    <div class="calculate">
+      <div class="calculate-header">
+        <h1 class="calculate-title">CALC</h1>
+        <p class="calculate-theme">THEME</p>
+        <div class="calculate-theme-radio">
+          <div class="group">
+            <label for="theme-1" class="theme-1">1</label>
+            <input type="radio" name="theme" id="theme-1" class="themes-calculator" checked>
+          </div>
+          <div class="group">
+            <label for="theme-2" class="theme-2">2</label>
+            <input type="radio" name="theme" id="theme-2" class="themes-calculator">
+          </div>
+          <div class="group">
+            <label for="theme-3" class="theme-3">3</label>
+            <input type="radio" name="theme" id="theme-3" class="themes-calculator">
+          </div>
+        </div>
+      </div>
+      <div class="calculate-display">
+        <p class="calculate-result" id="display-result">0</p>
+      </div>
+      <div class="calculate-buttons">
+        <button class="btn btn-7" data-numbers="7">7</button>
+        <button class="btn btn-8" data-numbers="8">8</button>
+        <button class="btn btn-9" data-numbers="9">9</button>
+        <button class="btn btn-delete" data-operation="delete">DEL</button>
+        <button class="btn btn-4" data-numbers="4">4</button>
+        <button class="btn btn-5" data-numbers="5">5</button>
+        <button class="btn btn-6" data-numbers="6">6</button>
+        <button class="btn btn-addition" data-operation="+">+</button>
+        <button class="btn btn-1" data-numbers="1">1</button>
+        <button class="btn btn-2" data-numbers="2">2</button>
+        <button class="btn btn-3" data-numbers="3">3</button>
+        <button class="btn btn-subtract" data-operation="-">-</button>
+        <button class="btn btn-dot" data-operation=".">.</button>
+        <button class="btn btn-0" data-numbers="0">0</button>
+        <button class="btn btn-divide" data-operation="/">/</button>
+        <button class="btn btn-multiply" data-operation="*">*</button>
+        <button class="btn btn-reset" data-operation="reset">RESET</button>
+        <button class="btn btn-equals" data-operation="=">=</button>
+      </div>
+    </div>
+  </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./scripts.js"></script>
 </body>
+
 </html>
